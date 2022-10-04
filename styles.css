@@ -1,0 +1,26 @@
+:root {
+    --primary-color: #3c1f76; /*meteorite*/
+    --secondary-color: #17f5b9; /*aqua*/
+    --tertiary-color: #ffa876;/*hit pink*/
+}
+
+body {
+    text-align: center;
+}
+.output {
+    width: 50%;
+    text-align: justify;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td, th {
+    border: 2px solid var(--primary-color);
+    width: 0%;
+    border-collapse: collapse;
+    padding: 0.4rem;
+}
+
+p {
+    display: inline;
+}
