@@ -1,12 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap');
+
 :root {
-    --primary-color: #3c1f76; /*meteorite*/
-    --secondary-color: #17f5b9; /*aqua*/
-    --tertiary-color: #ffa876;/*hit pink*/
+    --primary-color: #3c1f76;
+    /*meteorite*/
+    --secondary-color: #17f5b9;
+    /*aqua*/
+    --tertiary-color: #ffa876;
+    /*hit pink*/
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
+    font-family: 'Prompt', sans-serif;
+    min-width: 100vw;
+    background-color: var(--tertiary-color);
+}
+
+.container {
+    text-align: center;
+    margin: 4rem auto 7rem;
+}
+
+
+h1 {
+    letter-spacing: 0.2rem;
+    margin: 2rem;
+    color: var(--primary-color);
+}
+
+.paragraph {
+    font-size: larger;
+    margin: 1rem;
+}
+
+.bill {
+    display: block;
+    font-size: large;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+.billInput {
+    font-size: 14px;
+    outline: var(--tertiary-color);
+    background-color: var(--secondary-color);
+    padding: 0.6rem 1rem;
+    /* margin: 1rem; */
+    border: 2px solid var(--primary-color);
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 258px;
+}
+
+.initialMessage {
+    display: block;
+    font-size: larger;
+    margin: 1rem 0 0;
+}
+
+.hiddenContainer {
+    margin: 4rem auto 7rem;
     text-align: center;
 }
+
+.cash {
+    display: block;
+    font-size: large;
+    font-weight: 600;
+}
+
+.cashInput {
+    font-size: 14px;
+    outline: var(--secondary-color);
+    background-color: var(--secondary-color);
+    padding: 0.6rem 1rem;
+    /* margin: 1rem; */
+    border: 2px solid var(--primary-color);
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 258px;
+}
+
+.message {
+    display: block;
+    font-size: larger;
+    margin: 1rem 0 0;
+}
+
+.caption {
+    margin: 1rem auto;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+button {
+    background: var(--primary-color);
+  border: none;
+  color: var(--tertiary-color);
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  font-size: large;
+  cursor: pointer;
+  outline: #fff;
+  margin: 1rem auto;
+  display: block;
+}
+
+
+
+
 .output {
     width: 50%;
     text-align: justify;
@@ -14,9 +121,11 @@ body {
     margin: auto;
 }
 
-td, th {
+td,
+th,
+.row {
     border: 2px solid var(--primary-color);
-    width: 0%;
+    width:fit-content;
     border-collapse: collapse;
     padding: 0.4rem;
 }

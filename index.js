@@ -15,8 +15,9 @@ proceed.addEventListener("click", function showDiv() {
     if (billAmount.value > 0) {
         show.style.display = "block";
         initialMessage.style.display = "none";
+        proceed.style.display = "none";
     } else {
-        initialMessage.innerHTML = ("Invalid Bill Amount 3")
+        initialMessage.innerHTML = ("Invalid Bill Amount")
     }
 })
 
@@ -31,10 +32,10 @@ checkButton.addEventListener("click", function validateBillAmt() {
             message.innerHTML = ("Change to be returned: " + returnChange);
             calculateNotes(returnChange);
         } else {
-            message.innerHTML = ("Invalid Bill Amount 1")
+            message.innerHTML = ("Invalid Amount")
         }
     } else {
-        message.innerHTML = ("Invalid Bill Amount 2");
+        message.innerHTML = ("Invalid Amount");
     }
 });
 
