@@ -133,3 +133,39 @@ th,
 p {
     display: inline;
 }
+
+.footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;    
+    bottom: 0;
+    /* max-height: 20%; */
+    color: white;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    padding-inline-start: 0px;
+  }
+  
+  .footer .footer-header {
+    font-weight: bold;
+    text-align: center;
+    font-size: large;
+    padding: 1rem 0rem 1rem 0rem;
+  }
+  
+  ul {
+    padding: 0;
+  }
+  
+  li {
+    display: inline;
+  }
+
+  img {
+    width: 30px;
+    margin: 2%;
+    max-width: fit-content;
+  }
