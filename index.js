@@ -29,13 +29,30 @@ proceed.addEventListener("click", function showDiv() {
 
 
 checkButton.addEventListener("click", function validateBillAmt() {
-    if (Number(cashGiven.value) > Number(billAmount.value)) {
-        console.log('true')
-        var returnChange = Number(cashGiven.value) - Number(billAmount.value);
-        message.innerHTML = ("Change to be returned: " + returnChange);
-        calculateNotes(returnChange);
+    if (Number(billAmount.value) > 0) {
+        if (Number(cashGiven.value) > Number(billAmount.value)) {
+            console.log('true')
+            var returnChange = Number(cashGiven.value) - Number(billAmount.value);
+            message.innerHTML = ("Change to be returned: " + returnChange);
+            calculateNotes(returnChange);
+        } else {
+            if (Number(cashGiven.value) === Number(billAmount.value)) {
+                message.innerText = "No need to return change"
+                for (var i=0; i<notes.length; i++) {
+                    notesOutput[i].innerText = '0';
+                }
+            } else {
+            message.innerHTML = ("Invalid Amount")
+                for (var i=0; i<notes.length; i++) {
+                    notesOutput[i].innerText = '0';
+                }
+            }
+        }
     } else {
-        message.innerHTML = ("Invalid Amount")
+        message.innerText = "Invalid Amount";
+        for (var i=0; i<notes.length; i++) {
+            notesOutput[i].innerText = '0';
+        }
     }
 }
 );
